@@ -1,4 +1,14 @@
-//ハッシュ化による解法
+/** 
+ Problem: 169 Majority Element
+ Approach: Boyer-Moore Logic
+ Note: 自力で解けず。
+　- ハッシュ化をしたかったが、Mapの書き方を忘れていたため書けず。
+ - また、Map化したとて、最後にもう一度Map化した配列を回すとTime Complexity的に良くないのではと思てしまった。
+ - （ハッシュかによる解法のif(count >= majority){で解決
+*/
+
+
+//ハッシュ化による解法: こちらをやりたかった
 // function majorityElement(nums: number[]): number {
 //     //要素とカウント数マップ化する
 //     const counts = new Map<number, number>();

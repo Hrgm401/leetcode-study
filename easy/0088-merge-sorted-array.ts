@@ -1,6 +1,10 @@
-/**
- Do not return anything, modify nums1 in-place instead.
+/*
+ * Problem: 88 Merge Sorted Aray
+ * Approach: Two Pointers
+ * Note: 初見で解けず。
  */
+
+// My Solution
 // function merge(nums1: number[], m: number, nums2: number[], n: number): void {
 //     if (m === 0){
 //         nums1 = nums2;
@@ -24,6 +28,7 @@
 //     }
 // };
 
+// Optimized Solution (Learned)
 function merge(nums1: number[], m: number, nums2: number[], n: number):void {
     //ここでポインターを打つ
     //nums1はインデックスm - 1以降はn > 0なら0ということが分かっている

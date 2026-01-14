@@ -1,4 +1,9 @@
-function removeDuplicates(nums: number[]): number {
+/**
+ Problem: Remove Duplicates From Sorted Array II
+ Note:
+ 自力で回答
+ */
+function removeDuplicates2(nums: number[]): number {
     let count = 1;
     let pointer = 1;
     for (let i = 1; i < nums.length; i++){

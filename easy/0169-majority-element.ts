@@ -7,7 +7,6 @@
  - （ハッシュかによる解法のif(count >= majority){で解決
 */
 
-
 //ハッシュ化による解法: こちらをやりたかった
 // function majorityElement(nums: number[]): number {
 //     //要素とカウント数マップ化する
@@ -35,14 +34,14 @@ function majorityElement(nums: number[]): number {
     let mjr;
     //制約があるため、1:3, 2:4であれば打ち消しあい、2の方がcountが高くなる
     let count = 0;
-    for(const num of nums){
+    for (const num of nums) {
         //最初, 打ち消しあって超えた時0になる
-        if(count === 0){
+        if (count === 0) {
             mjr = num;
         }
         //次の値がmjr出なかったら-1される
         //打ち消しあったら0に、超えたら1に
         count += mjr !== num ? 1 : -1;
     }
-    return mjr;
-};
+    return mjr!;
+}

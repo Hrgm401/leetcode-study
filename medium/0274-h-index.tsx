@@ -40,9 +40,9 @@ function hIndex(citations: number[]): number {
     const n: number = citations.length;
     // 昇順にソートすれば現在の引用数よりあとはさらに引用されていると見分けることができる
     citations.sort((a, b) => a - b);
-    for (let i = 0; i < n; i++){
+    for (let i = 0; i < n; i++) {
         // n - i回以上引用された論文が、少なくともn - i本存在する
-        if(citations[i] >= n - i){
+        if (citations[i] >= n - i) {
             return n - i;
         }
     }

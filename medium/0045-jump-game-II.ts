@@ -1,5 +1,6 @@
 /**
  Problem: 45. Jump Game II
+ 2026/1/21
  https://leetcode.com/problems/jump-game-ii/?envType=study-plan-v2&envId=top-interview-150
  Approach: greedy（貪欲法）
  最大で進める範囲の中で、一番遠くへ飛べるものに乗り換える方法を本来は求めるべき。
@@ -39,14 +40,14 @@ function jump(nums: number[]): number {
     let maxDistance = 0;
     let curPos = 0;
     let jumpCount = 0;
-    
+
     // 最後は除く：それ以上進まない為
-    for (let i = 0; i < nums.length - 1; i++){
+    for (let i = 0; i < nums.length - 1; i++) {
         // 今進んだ距離 + num[i] が現在最大距離として保存されている
         // 値より大きくなるか比べる
         maxDistance = Math.max(maxDistance, i + nums[i]);
         // 実際にジャンプできたら始めてそこをカウントする。
-        if(i === curPos){
+        if (i === curPos) {
             jumpCount++;
             // 最大進んだ中で見つけた1番遠くまで進める距離を
             // 次の現在ポジションにとして保存する
@@ -54,4 +55,4 @@ function jump(nums: number[]): number {
         }
     }
     return jumpCount;
-};
+}

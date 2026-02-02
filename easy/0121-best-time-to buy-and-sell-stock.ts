@@ -1,5 +1,6 @@
 /**
  Problem: 121. Best Time to Buy and Sell Stock
+ 2026/1/14
  Approach: One Pass (一回走査)
  Note:
  自力回答はO(n2)になってしまう可能性あり。またコードも間違っている。
@@ -31,21 +32,21 @@
 // };
 
 //Optimized Solution (Learned)
-function maxProfit(prices: number[]): number {
+function maxProfit1(prices: number[]): number {
     //最安値を取得してゆく、最大値はminPriceの後にくる値を順々に比較してゆけばいいので
     //ここで取得する意味はない
     let minPrice = Number.MAX_VALUE;
     //最大値を更新する
     let maxProfit = 0;
 
-    for(let price of prices){
+    for (let price of prices) {
         //最安値を更新：minPriceにあらかじめNumber.MAX_VALUEを入れているので
         //最初から比較できる
-        if(price < minPrice){
+        if (price < minPrice) {
             minPrice = price;
         }
         //最安値でなかった場合は利益がmaxprofitより多ければmaxprofitを更新
-        else if (price - minPrice > maxProfit){
+        else if (price - minPrice > maxProfit) {
             maxProfit = price - minPrice;
         }
     }

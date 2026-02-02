@@ -6,12 +6,12 @@
 function removeDuplicates2(nums: number[]): number {
     let count = 1;
     let pointer = 1;
-    for (let i = 1; i < nums.length; i++){
-        if (nums[i] !== nums[i - 1]){
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] !== nums[i - 1]) {
             nums[pointer] = nums[i];
             count = 1;
             pointer++;
-        } else if (count <= 2){
+        } else if (count <= 2) {
             nums[pointer] = nums[i];
             count++;
             pointer++;
@@ -27,4 +27,4 @@ function removeDuplicates2(nums: number[]): number {
         // }
     }
     return pointer;
-};
+}

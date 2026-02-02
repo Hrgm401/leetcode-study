@@ -1,5 +1,6 @@
 /**
  Problem: Rotate Array
+ 2026/1/13
  Note:
  自力回答はTime ComplexityO(N*k)となり遅い
  Reverse法を学習: O(N)
@@ -25,7 +26,7 @@ function rotate(nums: number[], k: number): void {
     //k > nums.lengthだった場合、二週回るのはO(n)でないため、
     //余りをkとする処理を入れる
     k %= len;
-    
+
     //まず全体を反転させる
     //[1,2,3,4,5,6,7] → [7,6,5,4,3,2,1]
     reverseArr(nums, 0, len - 1);
@@ -37,15 +38,14 @@ function rotate(nums: number[], k: number): void {
     //残りを反転させる
     //[5,6,7,4,3,2,1] → [5,6,7,1,2,3,4]
     reverseArr(nums, k, len - 1);
-
 }
 
 //ヘルパー関数
-function reverseArr(nums: number[], start: number, end: number){
+function reverseArr(nums: number[], start: number, end: number) {
     //startとendを入れ替えて反転する
     //start > endになったり、start === endになるとループが終了するので
     //真ん中に着たらそれ以上反転しない
-    while(end > start){
+    while (end > start) {
         const temp = nums[start];
         nums[start] = nums[end];
         nums[end] = temp;
@@ -55,4 +55,4 @@ function reverseArr(nums: number[], start: number, end: number){
         start++;
         end--;
     }
-};
+}

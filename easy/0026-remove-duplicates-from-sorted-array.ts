@@ -23,9 +23,9 @@
 function removeDuplicates1(nums: number[]): number {
     //最初のindex = 0の値は含めるかつ比較対象がないのでindexの初期値は0
     let index = 1;
-    for (let i = 1; i < nums.length; i++){
+    for (let i = 1; i < nums.length; i++) {
         //一つ前の値と比較する
-        if(nums[i] !== nums[i - 1]){
+        if (nums[i] !== nums[i - 1]) {
             //ポインターを打ち、順々に重複がないようにする
             //前の値と比べることで、1, 1: index, 1, 2などと続いていても2が来るまでループはすり抜け、
             //2になったらnums[index]にnums[i]: 現在の値を代入し、indexを次に進める

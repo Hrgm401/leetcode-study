@@ -6,7 +6,6 @@
  * - その値を削除し、その後どうずらすかが分からなかったが、前から値を入れてゆき、位置ポインターを操作してゆくだけでよかった
  */
 
-
 // My Solution
 // function removeElement(nums: number[], val: number): number {
 //     let pointer = nums.length;
@@ -24,11 +23,11 @@
 // Time Complexity: O(n)
 // Space Complexity: O(1)
 function removeElement(nums: number[], val: number): number {
-	// 値を入れてゆく場所のポインターを設定する
+    // 値を入れてゆく場所のポインターを設定する
     let j = 0;
-    for(let n of nums){
-		// !== valでない時、ポインターの場所にnを入れ、j++する
-        if(n !== val){
+    for (let n of nums) {
+        // !== valでない時、ポインターの場所にnを入れ、j++する
+        if (n !== val) {
             nums[j++] = n;
         }
     }

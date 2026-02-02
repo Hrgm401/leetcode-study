@@ -1,5 +1,6 @@
 /**
  Problem: 380. Insert Delete GetRandom O(1)
+ 2026/1/22
  https://leetcode.com/problems/insert-delete-getrandom-o1/?envType=study-plan-v2&envId=top-interview-150
  Approach: getRandomをO(1)で行うため、配列を作成する必要あり。この際SetよりMApの方が適している。
  Note:

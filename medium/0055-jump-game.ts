@@ -1,5 +1,6 @@
 /**
  Problem: 55. Jump Game
+ 2026/1/19
  https://leetcode.com/problems/jump-game/?envType=study-plan-v2&envId=top-interview-150
  Approach: 最大で進める値がnumsに入っている。つまり、そこまで強制で進むわけではない。
  進んでゆき、推進力がなくなりそうで、今の推進力より多い値が入っていれば交換する。
@@ -33,11 +34,11 @@
 // 問題は単純にたどり着けるか否かを聞いているので、
 // maximum jump lengthの中で前に進めてlast indexにたどり着ければよいということ
 function canJump(nums: number[]): boolean {
-    let left = nums[0];//余り
-    for(let i = 1; i < nums.length; i++){
+    let left = nums[0]; //余り
+    for (let i = 1; i < nums.length; i++) {
         // まだループを抜けていないのにleft（余っている推進力）が0になったら、
         // もう最後までたどり着けないということ
-        if(left === 0){
+        if (left === 0) {
             return false;
         }
         //推進力を一つ減らした値と今のnumを比べて多く進めるほうを選ぶ（継ぎ足しのようなイメージ）
